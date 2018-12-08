@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_id: 
+  opponent: MyString
+  set: 
+  point: MyString
+  memo: MyText
+  member: MyString
+
+two:
+  event_id: 
+  opponent: MyString
+  set: 
+  point: MyString
+  memo: MyText
+  member: MyString
