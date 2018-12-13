@@ -5,6 +5,18 @@ class UsersController < ApplicationController
   end
 
   def show
+    case @user.position
+    when '1'
+      @user.position = "レフト"
+    when '2'
+      @user.position = "センター"
+    when '3'
+      @user.position = "ライト"
+    when '4'
+      @user.position = "セッター"
+    when '5'
+      @user.position = "リベロ"
+    end
   end
 
   def new

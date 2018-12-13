@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.email_field :email %>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :position %>
-    <%= form.text_field :position %>
+    <%= form.select :position,[["レフト",1],["センター",2],["ライト",3],["セッター",4],["リベロ",5]] %>
   </div>
 
   <div class="field">

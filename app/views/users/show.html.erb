@@ -1,2 +1,67 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Users#show</h1>
+
+<p>
+  <strong>登録名:</strong>
+  <%= @user.display_name %>
+</p>
+
+<p>
+  <strong>苗字:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>名前:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>住所:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>e-mail:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>パスワード:</strong>
+  <%= @user.pass %>
+</p>
+
+<p>
+  <strong>ポジション:</strong>
+    <%=case @user.position
+    when 1
+      @user.position = "レフト"
+    when 2
+      @user.position = "センター"
+    when 3
+      @user.position = "ライト"
+    when 4
+      @user.position = "セッター"
+    when 5
+      @user.position = "リベロ"
+    end
+    %>
+</p>
+
+<p>
+  <strong>背番号:</strong>
+  <%= @user.number %>
+</p>
+
+<p>
+  <strong>管理者:</strong>
+  <%= @user.admin %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+
 <p>Find me in app/views/users/show.html.erb</p>
