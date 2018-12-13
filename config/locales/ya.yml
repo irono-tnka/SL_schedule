@@ -1,0 +1,13 @@
+ya:
+  activerecord:
+    models:
+      user:メンバー登録
+    attributes:
+      display_name:表示名
+      first_name:苗字
+      last_name:名前
+      address:住所
+      email:メール
+      pass:パス
+      potision:ポジション
+      number:背番号
