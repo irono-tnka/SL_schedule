@@ -1,13 +1,22 @@
 ya:
-  activerecord:
-    models:
-      user: メンバー登録
-    attributes:
-      display_name: 登録名
-      first_name: 苗字
-      last_name: 名前
-      address: 住所
-      email: e-mail
-      pass: パスワード
-      position: ポジション
-      number: 背番号
+  # activerecord:
+  #   models:
+  #     user: メンバー登録
+  #   attributes:
+  #     display_name: 登録名
+  #     first_name: 苗字
+  #     last_name: 名前
+  #     address: 住所
+  #     email: e-mail
+  #     pass: パスワード
+  #     position: ポジション
+  #     number: 背番号
+
+  enums:
+    user:
+      position:
+        reft: レフト
+        center: センター
+        right: ライト
+        setter: セッター
+        libero: リベロ

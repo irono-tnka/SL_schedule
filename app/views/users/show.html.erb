@@ -34,7 +34,9 @@
 
 <p>
   <strong>ポジション:</strong>
-    <%=case @user.position
+    <%= @user.position %>
+
+    <%# <%=case @user.position
     when 1
       @user.position = "レフト"
     when 2
