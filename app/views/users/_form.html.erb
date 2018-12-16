@@ -43,7 +43,8 @@
 
   <div class="field">
     <%= form.label :position %>
-    <%= form.select :position, User.positions.keys, :selected=>User.positions[@user.position] %>
+    <%= form.select :position, User.positions.keys %>
+    <%# <%= form.select :main, Menu.mains.keys, :selected=>Menu.mains[@menu.main] %>
     <%# <%= form.select :position,[["レフト","レフト"],["センター","センター"],["ライト","ライト"],["セッター","セッター"],["リベロ","リベロ"]] %>
     <%# position 左側は、ウェブ上で見える文字、右側は、models　　user.rbで登録した文字 %>
   </div>
