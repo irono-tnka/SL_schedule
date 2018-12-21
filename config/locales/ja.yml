@@ -4,14 +4,15 @@ ja:
       user: メンバー登録
     attributes:
       user:
-      display_name: 登録名
-      first_name: 苗字
-      last_name: 名前
-      address: 住所
-      email: e-mail
-      pass: パスワード
-      position: ポジション
-      number: 背番号
+        display_name: 登録名
+        first_name: 苗字
+        last_name: 名前
+        address: 住所
+        email: e-mail
+        pass: パスワード
+        position: ポジション
+        number: 背番号
+        admin: 監理者
 
   enums:
     user:
