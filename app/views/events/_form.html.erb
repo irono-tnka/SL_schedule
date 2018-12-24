@@ -18,12 +18,12 @@
 
     <div class="field">
         <%= form.label :start_time %>
-        <%= form.time_select :start_time, :minute_step => 15 %>
+        <%= form.time_select :start_time, :default => {:hour => Time.now.hour, :minute => '00'} , :minute_step => 15 %>
     </div>    
 
     <div class="field">
         <%= form.label :end_time %>
-        <%= form.time_select :end_time, :default => {:hour => Time.now.hour + 3, :minute => '00'} ,:minute_step => 10 %>
+        <%= form.time_select :end_time, :default => {:hour => Time.now.hour + 1, :minute => '00'} ,:minute_step => 10 %>
 
     </div>    
 
