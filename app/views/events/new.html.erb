@@ -3,13 +3,6 @@
 
 <h1>New Events</h1>
 
-<%# <%= form_with(@event, url: path, method: method) do |f| %>
-
-  <%# <label class="control-label" for="">練習日</label> %>
-  <%# <%= f.date_select :date, {}, class: 'form-control' %> %>
-
-<%# <% end %> %> %>
-
 <%= render 'form', event: @event %>
 
 <%= link_to 'Back', events_path %>

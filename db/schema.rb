@@ -32,12 +32,12 @@ ActiveRecord::Schema.define(version: 2018_12_22_061306) do
     t.string "user_id"
     t.date "date"
     t.time "start_time"
+    t.time "end_time"
     t.string "location"
     t.text "memo"
     t.integer "event_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.time "end_time"
   end
 
   create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

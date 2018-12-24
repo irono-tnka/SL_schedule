@@ -18,8 +18,8 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
-    raise
-    
+  
+
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -55,6 +55,6 @@ class EventsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def event_params
-    params.require(:event).permit(:user_id, :date, :start_time, :end_time, :location, :memo)
+    params.require(:event).permit(:user_id, :date, :start_time, :end_time, :location, :memo, :event_type)
   end
 end
