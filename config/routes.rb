@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get '/login',to:'sessions#new'
+
   resources :blogs
   resources :events
   resources :users
