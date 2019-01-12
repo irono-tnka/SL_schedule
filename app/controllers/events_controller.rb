@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 # 全てのイベントを引っ張る
     # @events = Event.all
 
-    # 今月のイベントを引っ張る
+    # 今月のイベントを引っ張る    
     @events = Event.where(date: Time.now.all_month)
   end
 
@@ -21,7 +21,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
