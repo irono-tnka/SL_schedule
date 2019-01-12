@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  root to: 'events#index'
+
+
   get '/login', to:'sessions#new'
   post '/login', to:'sessions#create'
-  # delete  '/logout', to:'sessions#destroy'
+  delete  '/logout', to:'sessions#destroy'
 
-  root to: 'events#index'
 
   resources :blogs
   resources :events
