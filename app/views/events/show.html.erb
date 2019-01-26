@@ -1,0 +1,36 @@
+<h1>Events#show</h1>
+
+<p>
+    <strong>日付</strong>
+    <%= @event.date %>
+</p>
+
+<p>
+    <strong>時間</strong>
+    <%= @event.start_time.to_s(:time) %>
+    <%= @event.end_time.to_s(:time) %>
+</p>
+<p>
+    <strong>場所</strong>
+    <%= @event.location %>
+</p>
+<p>
+    <strong>出欠</strong>
+        <%= "まだこれから　＋ 出欠用のリンクも追加" %>
+        <%# <%= select :attendance, :attendance, Attendance.attendance.keys.map {|k| [Attendance.attendances_i18n[k],k]} %> %>
+
+</p>
+<p>
+    <strong>メモ</strong>
+    <%= @event.memo %>
+</p>
+<p>
+    <strong></strong>
+    <%= %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> 
+<%= link_to 'Back', events_path %>
+
+<p>Find me in app/views/events/show.html.erb</p>

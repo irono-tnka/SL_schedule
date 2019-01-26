@@ -1,0 +1,35 @@
+ja:
+  activerecord:
+    models:
+      user: メンバー登録
+    attributes:
+      user:
+        display_name: 登録名
+        first_name: 苗字
+        last_name: 名前
+        address: 住所
+        email: e-mail
+        pass: パスワード
+        position: ポジション
+        number: 背番号
+        admin: 監理者
+
+  enums:
+    user:
+      position:
+        left: レフト
+        center: センター
+        right: ライト
+        setter: セッター
+        libero: リベロ
+
+
+  enums:
+    event:
+      attendance:
+        unanswered: 未回答
+        attendance: 出席
+        absence: 欠席
+        leave_early: 早退
+        being_late: 遅刻
+        undesided: 未定

@@ -1,0 +1,56 @@
+<%= form_with(model: event, local: true) do |form| %>
+  <% if event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+        <%= form.label :date %>
+        <%= form.date_select :date %>
+    </div>
+
+<div class="field">
+        <%= form.label :event_type %>
+        <%= form.radio_button :time_p, :morning, :checked => true  %>午前
+        <%= form.radio_button :time_p, :agternoon %>午後
+
+    <div class="field">
+        <%= form.label :start_time %>
+        <%= form.time_select :start_time, :default => Time.now , :minute_step => 10 %>
+    </div>    
+
+    <div class="field">
+        <%= form.label :end_time %>
+        <%= form.time_select :end_time, :default => Time.now.since(1.hour) ,:minute_step => 10 %>
+
+    </div>    
+
+    <div class="field">
+        <%= form.label :location %>
+        <%= form.text_field :location %>
+    </div>
+    
+    <div class="field">
+        <%= form.label :memo %>
+        <%= form.text_field :memo %>
+    </div>
+    
+    <div class="field">
+        <%= form.label :event_type %>
+        <%= form.radio_button :event_type, :practice, :checked => true  %>練習
+        <%= form.radio_button :event_type, :tournament %>大会
+    </div>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+
+<% end %>
+

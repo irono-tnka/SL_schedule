@@ -1,0 +1,29 @@
+<h1>Users#index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%=User.human_attribute_name(:display_name) %></th>
+      <th><%=User.human_attribute_name(:first_name) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+
+<tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.display_name %></td>
+        <td><%= user.first_name %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+
+<%= link_to 'New user', new_user_path %>
+
+<p>Find me in app/views/users/index.html.erb</p>

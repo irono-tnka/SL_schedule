@@ -47,8 +47,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
+# production:
+#   <<: *default
+#   database: SL_schedule_production
+#   username: SL_schedule
+#   password: <%= ENV['SL_SCHEDULE_DATABASE_PASSWORD'] %>
+
 production:
+#半角スペース２個分の空白を開ける
   <<: *default
-  database: SL_schedule_production
-  username: SL_schedule
-  password: <%= ENV['SL_SCHEDULE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

@@ -1,0 +1,74 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :display_name %>
+    <%= form.text_field :display_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation, '確認用' %>
+    <%= form.text_field :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.select :position, User.positions_i18n.keys.map {|k| [User.positions_i18n[k],k]} %>
+
+    <%# <%= form.select :position, User.positions_i18n.keys.to_a, :selected=>@user.position_i18n %>
+    <%# <%= f.select :gender, User.genders_i18n.keys.map {|k| [User.genders_i18n[k], k]} %>
+    <%# <%= form.select :main, Menu.mains.keys, :selected=>Menu.mains[@menu.main] %>
+    <%# <%= form.select :position,[["レフト","レフト"],["センター","センター"],["ライト","ライト"],["セッター","セッター"],["リベロ","リベロ"]] %>
+    <%# position 左側は、ウェブ上で見える文字、右側は、models　　user.rbで登録した文字 %>
+  </div>
+
+  <div class="table">
+    <%= form.label :number %>
+    <%= form.text_field :number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :admin %>
+    <%= form.check_box :admin , :as => :boolean %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
