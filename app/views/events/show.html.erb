@@ -16,7 +16,9 @@
 </p>
 <p>
     <strong>出欠</strong>
-    <%= "まだこれから　＋ 出欠用のリンクも追加" %>
+        <%= "まだこれから　＋ 出欠用のリンクも追加" %>
+        <%# <%= select :attendance, :attendance, Attendance.attendance.keys.map {|k| [Attendance.attendances_i18n[k],k]} %> %>
+
 </p>
 <p>
     <strong>メモ</strong>
@@ -28,7 +30,7 @@
 </p>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Edit', edit_event_path(@event) %> 
 <%= link_to 'Back', events_path %>
 
 <p>Find me in app/views/events/show.html.erb</p>

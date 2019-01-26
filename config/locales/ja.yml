@@ -22,3 +22,14 @@ ja:
         right: ライト
         setter: セッター
         libero: リベロ
+
+
+  enums:
+    event:
+      attendance:
+        unanswered: 未回答
+        attendance: 出席
+        absence: 欠席
+        leave_early: 早退
+        being_late: 遅刻
+        undesided: 未定
