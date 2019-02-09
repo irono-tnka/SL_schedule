@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @attendance = Attendance.where(user_id: current_user, event_id: @event).first_or_initialize
   end
 
   def new

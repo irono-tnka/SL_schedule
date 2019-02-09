@@ -22,10 +22,7 @@ ja:
         right: ライト
         setter: セッター
         libero: リベロ
-
-
-  enums:
-    event:
+    attendance:
       attendance:
         unanswered: 未回答
         attendance: 出席
