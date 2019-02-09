@@ -1,5 +1,5 @@
 <h1>Events#show</h1>
-
+<%= form_with model:@attendance, url: create_or_update_attendances_path, local: true do |form| %>
 <p>
     <strong>日付</strong>
     <%= @event.date %>
@@ -16,21 +16,18 @@
 </p>
 <p>
     <strong>出欠</strong>
-        <%= "まだこれから　＋ 出欠用のリンクも追加" %>
-        <%# <%= select :attendance, :attendance, Attendance.attendance.keys.map {|k| [Attendance.attendances_i18n[k],k]} %> %>
+    <%= form.select :attendance, Attendance.attendances_i18n.keys.map {|k| [Attendance.attendances_i18n[k], k]} %>
+    <%= hidden_field_tag 'attendance[event_id]', params[:id] %>
 
 </p>
 <p>
     <strong>メモ</strong>
     <%= @event.memo %>
 </p>
-<p>
-    <strong></strong>
-    <%= %>
-</p>
+    <%= form.submit %>
+<% end %>
 
-
-<%= link_to 'Edit', edit_event_path(@event) %> 
+<%= link_to 'Edit', edit_event_path(@event) %>
 <%= link_to 'Back', events_path %>
 
 <p>Find me in app/views/events/show.html.erb</p>
